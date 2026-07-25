@@ -16,15 +16,20 @@
         <form id="food-form" class="space-y-3 mb-4">
             <div>
                 <label class="block text-sm font-medium text-slate-700">Food Name</label>
-                <input type="text" id="food-name" required placeholder="e.g. Nutella" class="w-full border border-slate-300 p-2 rounded focus:outline-none focus:border-indigo-500">
+                <input type="text" id="food-name" required placeholder="e.g. Water" class="w-full border border-slate-300 p-2 rounded focus:outline-none focus:border-indigo-500">
             </div>
             <div>
                 <label class="block text-sm font-medium text-slate-700">Calories</label>
-                <input type="number" id="food-calories" required min="1" placeholder="e.g. 539" class="w-full border border-slate-300 p-2 rounded focus:outline-none focus:border-indigo-500">
+                <input type="number" id="food-calories" required min="1" placeholder="e.g. 0" class="w-full border border-slate-300 p-2 rounded focus:outline-none focus:border-indigo-500">
             </div>
             <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white p-2 rounded font-semibold transition">Add Food</button>
             <button type="button" id="simulate-fetch-btn" class="w-full bg-slate-200 hover:bg-slate-300 text-slate-700 p-2 rounded font-semibold text-sm transition">Fetch from API</button>
         </form>
+        <div>
+            <h2 class="font-semibold text-slate-700 mb-2">Food List</h2>
+            <ul id="food-list" class="border border-slate-200 p-2 rounded max-h-40 overflow-y-auto bg-slate-50"></ul>
+            <button id="reset-btn" class="mt-4 w-full bg-rose-500 hover:bg-rose-600 text-white p-2 rounded text-sm font-semibold transition">Reset All</button>
+        </div>
     </div>
 </body>
 </html>
