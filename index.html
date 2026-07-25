@@ -9,6 +9,22 @@
 <body class="bg-slate-100 flex justify-center items-center min-h-screen">
     <div class="bg-white p-6 rounded-lg shadow-md w-full max-w-md">
         <h1 class="text-2xl font-bold mb-4 text-center text-slate-800">Calorie Counter</h1>
+        <div class="mb-4 text-center bg-slate-50 p-3 rounded border">
+            <span class="text-slate-600 font-medium">Total Calories: </span>
+            <span id="total-calories" class="text-xl font-bold text-indigo-600">0</span>
+        </div>
+        <form id="food-form" class="space-y-3 mb-4">
+            <div>
+                <label class="block text-sm font-medium text-slate-700">Food Name</label>
+                <input type="text" id="food-name" required placeholder="e.g. Nutella" class="w-full border border-slate-300 p-2 rounded focus:outline-none focus:border-indigo-500">
+            </div>
+            <div>
+                <label class="block text-sm font-medium text-slate-700">Calories</label>
+                <input type="number" id="food-calories" required min="1" placeholder="e.g. 539" class="w-full border border-slate-300 p-2 rounded focus:outline-none focus:border-indigo-500">
+            </div>
+            <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white p-2 rounded font-semibold transition">Add Food</button>
+            <button type="button" id="simulate-fetch-btn" class="w-full bg-slate-200 hover:bg-slate-300 text-slate-700 p-2 rounded font-semibold text-sm transition">Fetch from API</button>
+        </form>
     </div>
 </body>
 </html>
