@@ -106,3 +106,17 @@ function getFoodData() {
             simulateFetchBtn.disabled = false;
         });
 }
+foodForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const name = foodNameInput.value.trim();
+    const calories = foodCaloriesInput.value.trim();
+
+    if (name && calories) {
+        addFoodItem(name, calories);
+        foodForm.reset();
+        foodNameInput.focus();
+    }
+});
+resetBtn.addEventListener('click', resetCalories);
+simulateFetchBtn.addEventListener('click', getFoodData);
+init();
