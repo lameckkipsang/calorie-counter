@@ -45,3 +45,21 @@ function renderApp() {
 
     totalCaloriesDisplay.textContent = calculateTotalCalories();
 }
+function addFoodItem(name, calories) {
+    foodItems.push({ name: name, calories: Number(calories) });
+    saveToLocalStorage();
+    renderApp();
+}
+function removeFoodItem(index) {
+    foodItems.splice(index, 1);
+    //the splice() method id used to add, remove, replace elements directly in an array
+    saveToLocalStorage();
+    renderApp();
+}
+function resetCalories() {
+    if (confirm("Are you sure you want to reset today's calorie data?")) {
+        foodItems = [];
+        saveToLocalStorage();
+        renderApp();
+    }
+}
